@@ -1,6 +1,5 @@
 package ru.geekbrains.SpringMVS.Service.Impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.geekbrains.SpringMVS.Domain.Product;
 import ru.geekbrains.SpringMVS.Repository.ProductRepository;

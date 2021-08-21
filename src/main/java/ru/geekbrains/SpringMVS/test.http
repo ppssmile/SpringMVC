@@ -1,2 +1,5 @@
-GET localhost:8080/product/products
+GET localhost:8080/product/result
 ###
+GET localhost:8080/product/form
+###
+POST localhost:8080/product

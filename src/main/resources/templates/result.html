@@ -15,7 +15,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="p : {product}">
+    <tr th:each="p :${products}">
         <td th:text="${p.id}"/>
         <td th:text="${p.title}"/>
         <td th:text="${p.cost}"/>

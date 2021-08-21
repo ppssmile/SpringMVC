@@ -1,7 +1,5 @@
 package ru.geekbrains.SpringMVS.Repository.Impl;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.stereotype.Repository;
 import ru.geekbrains.SpringMVS.Domain.Product;
 import ru.geekbrains.SpringMVS.Repository.ProductRepository;

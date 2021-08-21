@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http:/www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http:/www.thymeleaf.org ">
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
 <head>
     <title>form</title>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 </head>
 <body>
 <h1>Add product</h1>
-<form th:action="${p: product}">
+<form action=# th:action="@{/product/form}" th:object="${product}" method="post">
     <ul>
         <li>
-            ID:<input type=text th:text="${p.id}">
+            <input type=number name="id" th:value ="*{id}">
         </li>
         <li>
-            <input type=text th:field="${p.title}">
+            <input type=text name="title" th:field="*{title}">
         </li>
         <li>
-            <input type=text th:field="${p.cost}">
+            <input type=number name="cost" th:field="*{cost}">
         </li>
         <li>
-            <bottom type="submit">Save product</bottom>
+            <button type="submit">Save product</button>
         </li>
     </ul>
 </form>

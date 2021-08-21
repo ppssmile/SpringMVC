@@ -16,25 +16,22 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping(  "/products")
-    @ResponseBody
+    @GetMapping(  "/result")
     public String getProducts(Model uiModel){
         List<Product> products= productService.findAll();
         uiModel.addAttribute("products", products);
-        return "products";
+        return "result";
     }
 
     @GetMapping( "/form")
-    @ResponseBody
     public String getForm(Model uiModel){
-        Product product = new Product();
-        uiModel.addAttribute("product", product);
-        return "product";
+        uiModel.addAttribute("product", new Product());
+        return "form";
     }
 
-    @PostMapping("/form")
-    public String createProduct(@RequestBody Product product){
+    @PostMapping(value = "/form")
+    public String createProduct(@ModelAttribute Product product){
         productService.addProduct(product);
-        return "redirect:/product";
+        return "redirect:/product/result";
     }
 }
